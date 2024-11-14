@@ -24,7 +24,7 @@ public class Menu {
         this.textoArea.setEditable(false);
         this.textoArea.setText("¡Bienvenido al simulador de batallas Pokémon!\n");
 
-        // Configurar ComboBoxes para seleccionar los Pokémon
+        
         String[] nombresPokemon = new String[entrenador.getEquipo().size()];
         for (int i = 0; i < entrenador.getEquipo().size(); i++) {
             nombresPokemon[i] = entrenador.getEquipo().get(i).getNombre();
@@ -33,7 +33,7 @@ public class Menu {
         pokemonComboBox1 = new JComboBox<>(nombresPokemon);
         pokemonComboBox2 = new JComboBox<>(nombresPokemon);
 
-        // Botones
+      
         btnMostrarEquipo = new JButton("Mostrar equipo");
         btnEntrenar = new JButton("Entrenar Pokémon");
         btnBatallar = new JButton("Iniciar Batalla");
@@ -46,20 +46,20 @@ public class Menu {
         ventana.setSize(500, 400);
         ventana.setLayout(new BorderLayout());
 
-        // Panel principal
+        
         panel.setLayout(new FlowLayout());
         panel.add(new JLabel("Selecciona Pokémon para la batalla:"));
         panel.add(pokemonComboBox1);
         panel.add(pokemonComboBox2);
         panel.add(btnBatallar);
 
-        // Botón para mostrar el equipo
+       
         panel.add(btnMostrarEquipo);
 
-        // Botón para entrenar un Pokémon
+     
         panel.add(btnEntrenar);
 
-        // Área de texto para mostrar mensajes
+       
         JScrollPane scrollPane = new JScrollPane(textoArea);
         panel.add(scrollPane);
 
@@ -117,7 +117,7 @@ public class Menu {
             Pokemon pokemon1 = entrenador.getEquipo().get(index1);
             Pokemon pokemon2 = entrenador.getEquipo().get(index2);
 
-            // Crear el objeto Batalla y pasarle el JTextArea para mostrar los eventos
+            
             Batalla batalla = new Batalla(textoArea);
             batalla.iniciarBatalla(pokemon1, pokemon2);
         } else {

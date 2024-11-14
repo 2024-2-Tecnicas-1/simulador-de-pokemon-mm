@@ -1,9 +1,9 @@
 package com.mycompany.proyectopokemon;
 
-import javax.swing.JTextArea; // Importa la clase JTextArea
+import javax.swing.JTextArea; 
 
 public class Batalla {
-    private JTextArea textoArea; // Para actualizar los mensajes de la batalla
+    private JTextArea textoArea; 
 
     public Batalla(JTextArea textoArea) {
         this.textoArea = textoArea;
@@ -23,9 +23,9 @@ public class Batalla {
                 textoArea.append(pokemon1.getNombre() + " tiene " + pokemon1.getHp() + " HP restantes\n");
             }
 
-            // Pausa para que el usuario vea los eventos
+           
             try {
-                Thread.sleep(1000); // 1 segundo de pausa entre los turnos
+                Thread.sleep(1000); 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
