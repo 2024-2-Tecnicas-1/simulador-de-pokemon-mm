@@ -1,7 +1,8 @@
-package simulador;
+package com.mycompany.proyectopokemon;
 
-public class Principal {
+public class ProyectoPokemon {
     public static void main(String[] args) {
-        // TODO: Aquí va tu código
+        Entrenador entrenador = new Entrenador("Ash");
+        Menu menu = new Menu(entrenador);
     }
 }
