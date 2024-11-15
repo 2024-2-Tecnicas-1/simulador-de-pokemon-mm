@@ -1,18 +1,18 @@
-package com.mycompany.proyectopokemon;
-
+package com.mycompany.proyectopokemon1;
+ 
 import java.util.ArrayList;
 import java.util.List;
-
+ 
 public class Entrenador {
     private String nombre;
     private List<Pokemon> equipo;
-
+ 
     public Entrenador(String nombre) {
         this.nombre = nombre;
         this.equipo = new ArrayList<>();
         inicializarEquipo();
     }
-
+ 
     private void inicializarEquipo() {
         equipo.add(new Pokemon("Ponyta", "Fuego", 50, 85));
         equipo.add(new Pokemon("Staryu", "Agua", 30, 45));
@@ -22,11 +22,11 @@ public class Entrenador {
         equipo.add(new Pokemon("Onix", "Roca/Tierra", 35, 45));
         equipo.add(new Pokemon("Doduo", "Normal/Volador", 35, 85));
     }
-
+ 
     public List<Pokemon> getEquipo() {
         return equipo;
     }
-
+ 
     public void mostrarEquipo() {
         System.out.println("Equipo de " + nombre + ":");
         for (int i = 0; i < equipo.size(); i++) {
@@ -34,9 +34,5 @@ public class Entrenador {
             System.out.println((i + 1) + ". " + p.getNombre() + " - Tipo: " + p.getTipo() + ", HP: " + p.getHp() + ", ATK: " + p.getAtk());
         }
     }
-
-    String getNombre() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
 }
-
+ 
